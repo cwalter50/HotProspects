@@ -49,12 +49,18 @@ struct ProspectsView: View {
         NavigationView {
            List {
                 ForEach(filteredProspects) { prospect in
-                    VStack(alignment: .leading) {
-                        Text(prospect.name)
-                            .font(.headline)
-                        Text(prospect.emailAddress)
-                            .foregroundColor(.secondary)
+                    HStack {
+                        if prospect.isContacted && self.filter == .none {
+                            Image(systemName: "checkmark.circle")
+                        }
+                        VStack(alignment: .leading) {
+                            Text(prospect.name)
+                                .font(.headline)
+                            Text(prospect.emailAddress)
+                                .foregroundColor(.secondary)
+                        }
                     }
+                    
                     .contextMenu {
                         Button(prospect.isContacted ? "Mark Uncontacted" : "Mark Contacted" ) {
                             self.prospects.toggle(prospect)
@@ -72,7 +78,14 @@ struct ProspectsView: View {
             
             }
                 .navigationBarTitle(title)
-                .navigationBarItems(trailing: Button(action: {
+        
+            .navigationBarItems(leading: Button(action: {
+                // toggle sortByName I could not think of a better way to do this. Try to figure out how to do it with Encapsulation
+                Prospects.sortByName = !Prospects.sortByName
+            }){
+                Image(systemName: "arrow.up.arrow.down.square")
+                Text(Prospects.sortByName ? "Name": "Most Recent")
+                },trailing: Button(action: {
 //                    let prospect = Prospect()
 //                    prospect.name = "Paul Hudson"
 //                    prospect.emailAddress = "paul@hackingwithswift.com"
