@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,11 @@
 		8329E98924833ABB00755D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8329E98824833ABB00755D41 /* Assets.xcassets */; };
 		8329E98C24833ABB00755D41 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8329E98B24833ABB00755D41 /* Preview Assets.xcassets */; };
 		8329E98F24833ABB00755D41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8329E98D24833ABB00755D41 /* LaunchScreen.storyboard */; };
+		8329E998248559C700755D41 /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 8329E997248559C700755D41 /* SamplePackage */; };
+		8329E99A24855C0100755D41 /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8329E99924855C0100755D41 /* ProspectsView.swift */; };
+		8329E99C24855C1A00755D41 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8329E99B24855C1A00755D41 /* MeView.swift */; };
+		8329E9A024855EE900755D41 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8329E99F24855EE900755D41 /* Prospect.swift */; };
+		8329E9A3248580E500755D41 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 8329E9A2248580E500755D41 /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,9 @@
 		8329E98B24833ABB00755D41 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8329E98E24833ABB00755D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8329E99024833ABB00755D41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8329E99924855C0100755D41 /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
+		8329E99B24855C1A00755D41 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		8329E99F24855EE900755D41 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8329E9A3248580E500755D41 /* CodeScanner in Frameworks */,
+				8329E998248559C700755D41 /* SamplePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,9 @@
 				8329E98124833ABA00755D41 /* SceneDelegate.swift */,
 				8329E98624833ABA00755D41 /* ContentView.swift */,
 				8329E98824833ABB00755D41 /* Assets.xcassets */,
+				8329E99924855C0100755D41 /* ProspectsView.swift */,
+				8329E99F24855EE900755D41 /* Prospect.swift */,
+				8329E99B24855C1A00755D41 /* MeView.swift */,
 				8329E98D24833ABB00755D41 /* LaunchScreen.storyboard */,
 				8329E99024833ABB00755D41 /* Info.plist */,
 				8329E98324833ABA00755D41 /* HotProspects.xcdatamodeld */,
@@ -94,6 +107,10 @@
 			dependencies = (
 			);
 			name = HotProspects;
+			packageProductDependencies = (
+				8329E997248559C700755D41 /* SamplePackage */,
+				8329E9A2248580E500755D41 /* CodeScanner */,
+			);
 			productName = HotProspects;
 			productReference = 8329E97C24833ABA00755D41 /* HotProspects.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +139,10 @@
 				Base,
 			);
 			mainGroup = 8329E97324833ABA00755D41;
+			packageReferences = (
+				8329E996248559C700755D41 /* XCRemoteSwiftPackageReference "SamplePackage" */,
+				8329E9A1248580E500755D41 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 8329E97D24833ABA00755D41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,8 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8329E99C24855C1A00755D41 /* MeView.swift in Sources */,
 				8329E98024833ABA00755D41 /* AppDelegate.swift in Sources */,
 				8329E98224833ABA00755D41 /* SceneDelegate.swift in Sources */,
+				8329E9A024855EE900755D41 /* Prospect.swift in Sources */,
+				8329E99A24855C0100755D41 /* ProspectsView.swift in Sources */,
 				8329E98724833ABA00755D41 /* ContentView.swift in Sources */,
 				8329E98524833ABA00755D41 /* HotProspects.xcdatamodeld in Sources */,
 			);
@@ -293,6 +317,7 @@
 				DEVELOPMENT_TEAM = 84LWTY6T5F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HotProspects/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +338,7 @@
 				DEVELOPMENT_TEAM = 84LWTY6T5F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HotProspects/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,6 +372,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8329E996248559C700755D41 /* XCRemoteSwiftPackageReference "SamplePackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/SamplePackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		8329E9A1248580E500755D41 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8329E997248559C700755D41 /* SamplePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8329E996248559C700755D41 /* XCRemoteSwiftPackageReference "SamplePackage" */;
+			productName = SamplePackage;
+		};
+		8329E9A2248580E500755D41 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8329E9A1248580E500755D41 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8329E98324833ABA00755D41 /* HotProspects.xcdatamodeld */ = {
